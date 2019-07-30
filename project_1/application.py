@@ -2,24 +2,17 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/')             #main route
 def hello_world():
     return 'Hello, World!'
 
 
-@app.route('/hello')
+@app.route('/hello') # another route to tell hello zorld to everyone
 def hello():
     return 'Hello, World'
 
-@app.route("/michael")
-def index():
-    return "Hello, michael , how are you ! "
 
 
-@app.route('/<string:name>')
+@app.route('/<string:name>')# route to tell hello visitor_name to visitor
 def name(name):
     return f'hello, {name} '
-
-#@app.route('/user/<username>')
-#def profile(username):
-#   return '{}\'s profile'.format(escape(username))
